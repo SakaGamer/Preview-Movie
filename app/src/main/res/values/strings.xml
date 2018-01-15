@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Movie Preview</string>
+    <string name="nav_movie">Movie</string>
+    <string name="nav_watchlist">Watchlist</string>
+    <string name="nav_edit_profile">Edit Profile</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_logout">Log out</string>
+
+    <string name="user_score">User Score</string>
+    <string name="play_trailer">Play Trailer</string>
+    <string name="overview">Overview</string>
+    <string name="original_language">Original Language</string>
+    <string name="runtime">Runtime</string>
+    <string name="budget">Budget</string>
+    <string name="revenue">Revenue</string>
+    <string name="homepage">Homepage</string>
+    <string name="percent">%</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="more">More</string>
+    <string name="notification">Notification</string>
+
+    <string name="error_player">Error playing youtube video</string>
+
+    <!--api key-->
+    <string name="DEVELOPER_KEY">AIzaSyDQChNTSGc9oh0VzlZmYjj8GY1ku8KhPmA</string>
+    <string name="MOVIE_API_KEY">eb64aa0d2e638be2086ebdb7fa826a69</string>
+
+
+    <string-array name="movies_filter">
+        <item>popular</item>
+        <item>top_rated</item>
+        <item>upcoming</item>
+        <item>now_playing</item>
+    </string-array>
+
+</resources>

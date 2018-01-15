@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDark">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/mv_detail_img_backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:scaleType="fitXY" />
+
+            <Space
+                android:id="@+id/mv_detail_space"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_alignParentTop="true" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/mv_detail_round_img_poster"
+                android:layout_width="120dp"
+                android:layout_height="180dp"
+                android:layout_below="@+id/mv_detail_space"
+                android:layout_margin="24dp"
+                app:cardCornerRadius="@dimen/large_margin"
+                app:cardElevation="@dimen/default_margin">
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/mv_detail_img_poster"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/mv_detail_txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mv_detail_img_backdrop"
+                android:layout_marginTop="24dp"
+                android:layout_toEndOf="@id/mv_detail_round_img_poster"
+                android:text="@string/app_name"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mv_detail_round_img_poster"
+                android:layout_marginBottom="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp">
+
+                        <ProgressBar
+                            android:id="@+id/mv_detail_progress_bar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:max="10"
+                            android:progress="8"
+                            android:progressDrawable="@drawable/circular" />
+
+                        <TextView
+                            android:id="@+id/mv_detail_txt_vote"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/mv_detail_txt_vote"
+                            android:text="@string/percent"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:text="@string/user_score"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_play" />
+
+                    <TextView
+                        android:id="@+id/mv_detail_txt_play_trailer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/play_trailer"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/mv_detail_overview_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDark"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:text="@string/overview"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mv_detail_txt_overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/large_margin"
+                android:text="@string/app_name"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/original_language"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mv_detail_txt_original_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:lineSpacingExtra="@dimen/large_margin"
+                android:text="@string/original_language"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/runtime"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mv_detail_txt_runtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:lineSpacingExtra="@dimen/large_margin"
+                android:text="@string/runtime"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/budget"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mv_detail_txt_budget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:lineSpacingExtra="@dimen/large_margin"
+                android:text="@string/budget"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/revenue"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mv_detail_txt_revenue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:lineSpacingExtra="@dimen/large_margin"
+                android:text="@string/revenue"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/homepage"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mv_detail_txt_homepage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:lineSpacingExtra="@dimen/large_margin"
+                android:text="@string/homepage"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

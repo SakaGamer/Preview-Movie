@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/navigation_movie"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/nav_movie" />
+
+        <item
+            android:id="@+id/navigation_watchlist"
+            android:icon="@drawable/ic_dashboard_black_24dp"
+            android:title="@string/nav_watchlist" />
+
+        <item
+            android:id="@+id/navigation_edit_profile"
+            android:icon="@drawable/ic_notifications_black_24dp"
+            android:title="@string/nav_edit_profile" />
+
+    </group>
+
+    <item android:title="@string/more">
+
+        <menu>
+
+            <item
+                android:id="@+id/navigation_settings"
+                android:icon="@drawable/ic_dashboard_black_24dp"
+                android:title="@string/nav_settings" />
+
+            <item
+                android:id="@+id/navigation_logout"
+                android:icon="@drawable/ic_notifications_black_24dp"
+                android:title="@string/nav_logout" />
+
+        </menu>
+
+    </item>
+
+</menu>
