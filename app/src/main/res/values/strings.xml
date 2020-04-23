@@ -23,10 +23,7 @@
 
     <string name="error_player">Error playing youtube video</string>
 
-    <!--api key-->
-    <string name="DEVELOPER_KEY">AIzaSyDQChNTSGc9oh0VzlZmYjj8GY1ku8KhPmA</string>
-    <string name="MOVIE_API_KEY">eb64aa0d2e638be2086ebdb7fa826a69</string>
-
+    <!--api key save local-->
 
     <string-array name="movies_filter">
         <item>popular</item>
